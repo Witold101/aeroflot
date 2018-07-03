@@ -9,9 +9,9 @@ import by.school.aeroflot.services.EntitiesServices;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-public class ServiceTeam extends ServiceAbstract implements EntitiesServices<Team,Long> {
+public class ServiceTeam extends ServiceAbstract implements EntitiesServices<Team, Long> {
 
-    DAOTeam daoTeam = DAOTeam.getInstance();
+    private DAOTeam daoTeam = DAOTeam.getInstance();
 
     public ServiceTeam(Connection connection) {
         super(connection);
@@ -70,7 +70,7 @@ public class ServiceTeam extends ServiceAbstract implements EntitiesServices<Tea
 
     @Override
     public void delete(Long id) {
-        if (id != null){
+        if (id != null) {
             try {
                 startTransaction();
                 daoTeam.delete(id);

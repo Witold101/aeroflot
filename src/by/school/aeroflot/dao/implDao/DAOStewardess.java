@@ -11,7 +11,7 @@ import java.util.Map;
 
 import static by.school.aeroflot.db.SQLQueryConstants.*;
 
-public class DAOStewardess implements DAO<Stewardess,Long>,DAOSuport {
+public class DAOStewardess implements DAO<Stewardess, Long>, DAOSuport {
     private static volatile DAOStewardess INSTANCE = null;
     private Map<String, PreparedStatement> pstMap;
 
@@ -39,12 +39,13 @@ public class DAOStewardess implements DAO<Stewardess,Long>,DAOSuport {
         }
         return dao;
     }
+
     @Override
     public Stewardess save(Stewardess stewardess) throws SQLException {
         PreparedStatement pst = pstMap.get("save");
         pst.setString(1, stewardess.getName());
         pst.setString(2, stewardess.getLastName());
-        pst.setLong(3,stewardess.getFlyListId());
+        pst.setLong(3, stewardess.getFlyListId());
         pst.executeUpdate();
         ResultSet rs = pst.getGeneratedKeys();
         if (rs.next()) {

@@ -9,7 +9,7 @@ import by.school.aeroflot.services.EntitiesServices;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-public class ServiceStewardess extends ServiceAbstract implements EntitiesServices<Stewardess,Long> {
+public class ServiceStewardess extends ServiceAbstract implements EntitiesServices<Stewardess, Long> {
 
     private DAOStewardess daoStewardess = DAOStewardess.getInstance();
 
@@ -34,7 +34,8 @@ public class ServiceStewardess extends ServiceAbstract implements EntitiesServic
                 System.out.println("Error save Stewardess Item in DB");
                 e.printStackTrace();
             }
-        }return t;
+        }
+        return t;
     }
 
     @Override
@@ -69,7 +70,7 @@ public class ServiceStewardess extends ServiceAbstract implements EntitiesServic
 
     @Override
     public void delete(Long id) {
-        if (id != null){
+        if (id != null) {
             try {
                 startTransaction();
                 daoStewardess.delete(id);
