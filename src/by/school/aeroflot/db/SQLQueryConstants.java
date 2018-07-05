@@ -13,7 +13,7 @@ public class SQLQueryConstants {
     public static final String PLANE_TABLE = "PLANE_TABLE";
     public static final String TEAM_TABLE = "TEAM_TABLE";
     public static final String RADIOOPERATOR_TABLE = "RADIOOPERATOR_TABLE";
-    public static final String RADIOOPERATOR_PLANE = "RADIOOPERATOR_PLANE";
+    public static final String FLY_LiST_TABLE = "FLY_LiST_TABLE";
     public static final String QUALIFICATION = "QUALIFICATION";
     public static final String STEWARDESS_TABLE = "STEWARDESS_TABLE";
 //-------------------------------------------------------------------------------
